@@ -15,7 +15,7 @@ const Name = () => {
             <div className="mt-12 flex justify-center">
                 <Link to='/contacts'><Button>Next Step <FaArrowRight /></Button></Link>
             </div>
-            <p className='text-sm text-slate-400 absolute bottom-10 right-0'>Already have an account? <Link className='btn btn-link text-[#1678CB] p-0'>LogIn Here!</Link></p>
+            <p className='text-sm text-slate-400 absolute bottom-10 right-0'>Already have an account? <Link to='/login' className='btn btn-link text-[#1678CB] p-0'>LogIn Here!</Link></p>
         </div>
     );
 };
