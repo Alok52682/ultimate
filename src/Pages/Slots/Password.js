@@ -8,7 +8,7 @@ const Password = () => {
     return (
         <div className="card-body relative">
             <div className="form-control mt-12">
-                <input type="Password"{...register("password", {
+                <input type="Password" {...register("password", {
                     required: "Password is required",
                     minLength: { value: 8, message: "Password must be 8 characters long" }
                 })} placeholder="Write Password" className="border-0 border-b-2 border-grey-dark px-3 py-2 text-lg" />

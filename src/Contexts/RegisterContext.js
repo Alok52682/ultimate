@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import { useForm } from "react-hook-form";
+import toast from 'react-hot-toast';
 
 export const RegContext = createContext();
 const RegisterContext = ({ children }) => {
@@ -12,7 +13,17 @@ const RegisterContext = ({ children }) => {
             email: data.email,
             password: data.password
         }
-        console.log(regData);
+        fetch('https://test.nexisltd.com/signup', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(regData)
+        })
+            .then(res => res.json())
+            .then((data) => {
+                toast.success(data.sucess);
+            })
 
     };
 
