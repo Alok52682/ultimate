@@ -18,16 +18,15 @@ const AttendanceTable = () => {
             return data;
         }
     });
-    console.log(data);
     if (isLoading) {
         return <Loading />
     }
 
     return (
         <div>
-            <img src={logo} className='mt-12 ml-14' alt="" />
-            <h2 className='bg-[#1678CB] text-4xl text-white w-[480px] mx-auto px-14 py-4 rounded'>Attendance information</h2>
-            <div className="overflow-x-auto mx-auto w-9/12 mt-20">
+            <img src={logo} className='lg:mt-12 lg:ml-14 mx-auto lg:mx-0' alt="" />
+            <h2 className='bg-[#1678CB] text-xl lg:text-4xl text-white w-[300px] lg:w-[480px] mx-auto px-10 lg:px-14 py-4 rounded mt-10 lg:mt-0'>Attendance information</h2>
+            <div className="overflow-x-auto mx-auto lg:w-9/12 mt-20">
                 <table className="table w-full">
                     <thead>
                         <tr className='bg-white'>
