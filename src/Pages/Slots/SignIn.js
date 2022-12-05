@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../Compontents/Button';
 import toast from 'react-hot-toast';
 
@@ -9,6 +9,7 @@ const SignIn = () => {
         boxShadow: '1px -10px 25px rgba(201, 201, 201, 0.25), -1px 10px 25px rgba(147, 147, 147, 0.25)'
     }
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate()
 
     const handelLogIn = data => {
         const loginData = {
@@ -25,6 +26,7 @@ const SignIn = () => {
             .then(res => res.json())
             .then((data) => {
                 localStorage.setItem('Access_Token', data.access_token);
+                navigate('/attendance')
                 toast.success('Log in successfull')
             })
     }

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import AccountCreation from "../Layouts/AccountCreation";
+import AttendanceTable from "../Pages/Attendance/AttendanceTable";
 import Contacts from "../Pages/Slots/Contacts";
 import Name from "../Pages/Slots/Name";
 import Password from "../Pages/Slots/Password";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             }
 
         ]
+    },
+    {
+        path: '/attendance',
+        element: <AttendanceTable />
     }
 ])
 
